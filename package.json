@@ -15,7 +15,11 @@
     "type": "commonjs",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "index.html",
+    "build": "index.html",
+    "test": "index.html",
+    "eject": "index.html eject"
+        
     },
     "dependencies": {
         "mysql": "^2.18.1"
