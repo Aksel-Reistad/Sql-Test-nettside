@@ -1,0 +1,23 @@
+{
+    "name": "sql-nettside",
+    "version": "1.0.0",
+    "description": "",
+    "homepage": "https://github.com/Aksel-Reistad/Sql-Test-nettside#readme",
+    "bugs": {
+        "url": "https://github.com/Aksel-Reistad/Sql-Test-nettside/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Aksel-Reistad/Sql-Test-nettside.git"
+    },
+    "license": "ISC",
+    "author": "Your Name <email@example.com> (https://example.com)",
+    "type": "commonjs",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "mysql": "^2.18.1"
+    }
+}
