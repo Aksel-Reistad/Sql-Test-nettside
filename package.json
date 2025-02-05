@@ -15,13 +15,14 @@
     "type": "commonjs",
     "main": "index.js",
     "scripts": {
-    "start": "index.html",
-    "build": "index.html",
-    "test": "index.html",
-    "eject": "index.html eject"
+        "start": "some-server-command",
         
+        "build": "index.html",
+        "test": "index.html",
+        "eject": "index.html eject"
     },
     "dependencies": {
-        "mysql": "^2.18.1"
+        "mysql": "^2.18.1",
+        "node": "^23.7.0"
     }
 }
