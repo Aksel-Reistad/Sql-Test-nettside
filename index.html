@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,23 +19,43 @@
     <h3>Results:</h3>
     <pre id="results"></pre>
 
+
+
+
     <script>
         async function runQuery() {
-            const query = document.getElementById('sqlQuery').value;
-            const response = await fetch('/run-query', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query })
-            });
+    const query = document.getElementById('sqlQuery').value;
+    const response = await fetch('http://localhost:8080/run-query', { // Bruker riktig port
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query })
+    });
 
-            const data = await response.json();
-            const results = document.getElementById('results');
-            if (data.error) {
-                results.textContent = 'Error: ' + data.error;
-            } else {
-                results.textContent = JSON.stringify(data.result, null, 2);
-            }
-        }
+    const data = await response.json();
+    const results = document.getElementById('results');
+    if (data.error) {
+        results.textContent = 'Error: ' + data.error;
+    } else {
+        results.textContent = JSON.stringify(data.results, null, 2);
+    }
+}
+
+        // async function runQuery() {
+        //     const query = document.getElementById('sqlQuery').value;
+        //     const response = await fetch('/run-query', {
+        //         method: 'POST',
+        //         headers: { 'Content-Type': 'application/json' },
+        //         body: JSON.stringify({ query })
+        //     });
+
+        //     const data = await response.json();
+        //     const results = document.getElementById('results');
+        //     if (data.error) {
+        //         results.textContent = 'Error: ' + data.error;
+        //     } else {
+        //         results.textContent = JSON.stringify(data.result, null, 2);
+        //     }
+        // }
     </script>
 </body>
 </html>
